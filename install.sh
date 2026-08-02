@@ -17,13 +17,17 @@ if [ "$NODE_MAJOR" -lt 20 ]; then
   exit 1
 fi
 
-mkdir -p "$ROOT" "$TARGET" "$TARGET/backups"
+mkdir -p "$ROOT" "$TARGET" "$TARGET/lib" "$TARGET/backups"
 
 for file in manager.mjs manage.sh sync-models.sh README.md README_EN.md providers.example.json; do
   if [ -f "$TARGET/$file" ]; then
     cp "$TARGET/$file" "$TARGET/backups/$file.$STAMP.bak"
   fi
   cp "$SOURCE_DIR/$file" "$TARGET/$file"
+done
+
+for file in common.mjs effort.mjs sync.mjs menu.mjs; do
+  cp "$SOURCE_DIR/lib/$file" "$TARGET/lib/$file"
 done
 
 if [ ! -f "$TARGET/providers.json" ]; then
