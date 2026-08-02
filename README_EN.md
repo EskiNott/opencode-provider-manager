@@ -29,7 +29,7 @@ A local multi-provider manager for OpenCode Desktop. It provides an interactive 
 ```bash
 git clone <repository-url>
 cd opencode-provider-manager
-./install.sh
+bash install.sh
 ```
 
 Then run:
@@ -71,7 +71,7 @@ Credentials are stored locally in `providers.json` and may also appear in the ge
 npm test
 ```
 
-The smoke test uses a temporary directory and does not contact real providers.
+The smoke test uses a temporary directory and does not contact real providers. The runtime is split into small modules under `lib/` for easier review and contribution.
 
 ## License
 
