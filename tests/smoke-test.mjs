@@ -14,6 +14,10 @@ fs.mkdirSync(appDir, { recursive: true });
 for (const file of ["manager.mjs", "providers.example.json"]) {
   fs.copyFileSync(path.join(projectDir, file), path.join(appDir, file));
 }
+fs.mkdirSync(path.join(appDir, "lib"), { recursive: true });
+for (const file of ["common.mjs", "effort.mjs", "sync.mjs", "menu.mjs"]) {
+  fs.copyFileSync(path.join(projectDir, "lib", file), path.join(appDir, "lib", file));
+}
 
 const configFile = path.join(tempRoot, "opencode.json");
 const source = {
