@@ -30,7 +30,7 @@
 ```bash
 git clone <repository-url>
 cd opencode-provider-manager
-./install.sh
+bash install.sh
 ```
 
 安装位置：
@@ -133,7 +133,8 @@ Base URL + /models
 └── opencode-provider-manager/
     ├── providers.json                  # 本地供应商与 Key，已被 Git 忽略
     ├── providers.example.json          # 空白公开模板
-    ├── manager.mjs                     # 主程序
+    ├── manager.mjs                     # 命令入口
+    ├── lib/                            # 配置、同步、effort 与交互模块
     ├── manage.sh                       # 交互入口
     ├── sync-models.sh                  # 快速同步入口
     ├── .models-cache.json              # 模型缓存
