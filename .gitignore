@@ -1,0 +1,24 @@
+# Local credentials and provider configuration
+providers.json
+.env
+.env.*
+
+# Generated OpenCode configuration (may contain credentials)
+opencode.json
+opencode.jsonc
+opencode.preview.json
+
+# Runtime state and reports
+.models-cache.json
+.model-details.json
+.models-dev-cache.json
+.managed-provider-ids.json
+last-sync-report.json
+backups/
+*.bak
+*.tmp
+
+# Tooling
+node_modules/
+.DS_Store
+Thumbs.db
