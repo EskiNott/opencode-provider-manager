@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "settings": {
+    "configFile": "~/.config/opencode/opencode.json",
+    "timeoutMs": 30000,
+    "useModelsDev": true,
+    "modelsDevCacheHours": 24,
+    "defaultContext": 128000,
+    "defaultOutput": 32768,
+    "filterNonChatModels": true,
+    "effortMode": "balanced",
+    "addReasoningVariants": true
+  },
+  "providers": []
+}
